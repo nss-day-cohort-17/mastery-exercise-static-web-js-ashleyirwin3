@@ -8,8 +8,15 @@ var obj = {
 var click = document.getElementById("mouseEvent");
 
 document.addEventListener('click', function (mouseEvent) {
-        if (mouseEvent.button === 'click') {
-                console.log("Show in console")
+        if (mouseEvent.button. === 'click') {
+                console.log("clicking")
         }
-        return mouseEvent.button
+        return mouseEvent
 } )
+
+mouseEvent.innerHTML = click
+
+
+// document.addEventListener('click', function (mouseEvent) {
+//   console.log("clicking")
+// })
