@@ -31,6 +31,7 @@ var enter = addEventListener('enter', function (keypress) {
         if (keypress === 'enter') {
                 console.log(tree)
         }
+        }
         return keypress
 } )
 
