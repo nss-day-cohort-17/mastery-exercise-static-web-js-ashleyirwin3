@@ -29,7 +29,14 @@ treeHeight.addEventListener("keypress", onkeypress);
                 if (keypressed === 'Enter') {
                 }
         };
-charcter.addEventListener("keypress, onkeypress");
+
+character.addEventListener("keypress", onkeypress);
+        function onkeypress(e) {
+                console.log(e)
+                var keypressed = e.keypressed;
+                if (keypressed === 'Enter') {
+                }
+        };
 
 
 treeHeight.innerHTML = inputHeight
