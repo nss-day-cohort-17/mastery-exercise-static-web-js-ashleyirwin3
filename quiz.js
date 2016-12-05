@@ -28,6 +28,9 @@ treeHeight.addEventListener("keypress", onkeypress);
                 console.log("you pressed enter");
                 console.log(treeHeight.value);
                 }
+        if (character.value == "") {
+                alert("Field cannot be empty")
+        }
         };
 
 character.addEventListener("keypress", onkeypress);
@@ -35,7 +38,10 @@ character.addEventListener("keypress", onkeypress);
         if (e.key === 'Enter') {
                 console.log("you pressed enter");
                 console.log(character.value);
+        if (character.value == "") {
+                alert("Field cannot be empty")
                 }
+        }
         };
 
 
