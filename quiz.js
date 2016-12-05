@@ -18,12 +18,22 @@ growTree.addEventListener('click', function() {
 
 growTree.innerHTML = grow
 
+return growTree
+
 // User can press enter to see tree //
 
-treeHeight.addEventListener("keypress", onkeypress); {
-        }
+treeHeight.addEventListener("keypress", onkeypress);
+        function onkeypress(e) {
+                console.log(e)
+                var keypressed = e.keypressed;
+                if (keypressed === 'Enter') {
+                }
+        };
+charcter.addEventListener("keypress, onkeypress");
+
 
 treeHeight.innerHTML = inputHeight
+charcter.innerHTML = inputCharacter
 
 
 
