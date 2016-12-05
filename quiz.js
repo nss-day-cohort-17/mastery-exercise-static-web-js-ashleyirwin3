@@ -1,41 +1,31 @@
 
 // declaring vars for user input //
 
-var treeHeight = document.getElementById('inputHeight');
+var treeHeight = document.getElementById("inputHeight");
 var character = document.getElementById('inputCharacter');
+var growTree = document.getElementById("grow");
 
-var obj = {
-        treeHeight: inputHeight,
-        character: inputCharacter,
-};
+var tree =  {
+        var height = 0,
+        var character = " ",
+}
 
 
-// button element //
-
-var click = document.getElementById("mouseEvent");
-
-document.addEventListener('click', function (mouseEvent) {
-        if (mouseEvent.button. === 'click') {
-                console.log("clicking")
+// Grow your tree event listener function //
+growTree.addEventListener('click', function() {
+        console.log("grow");
         }
-        return mouseEvent
-} )
 
-mouseEvent.innerHTML = click
+growTree.innerHTML = grow
 
-// user can press enter to see tree //
+// User can press enter to see tree //
 
-var enter = document.getElementById("keyPress")
-
-var enter = addEventListener('enter', function (keypress) {
-        if (keypress === 'enter') {
-                console.log(tree)
+treeHeight.addEventListener("keypress", onkeypress); {
         }
-        }
-        return keypress
-} )
 
-keyPress.innerHTML = tree
+treeHeight.innerHTML = inputHeight
+
+
 
 // document.addEventListener('click', function (mouseEvent) {
 //   console.log("clicking")
