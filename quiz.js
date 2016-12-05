@@ -30,6 +30,14 @@ treeHeight.addEventListener("keypress", onkeypress);
                 }
         };
 
+character.addEventListener("keypress", onkeypress);
+        function onkeypress(e) {
+        if (e.key === 'Enter') {
+                console.log("you pressed enter");
+                console.log(character.value);
+                }
+        };
+
 
 // character.addEventListener("keypress", onkeypress);
 //         function onkeypress(e) {
