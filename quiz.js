@@ -2,63 +2,65 @@
 // declaring vars for user input //
 
 var treeHeight = document.getElementById("tree-Height");
-var character = document.getElementById('input-Character');
-var growTree = document.getElementById("grow-Tree");
+var userCharacter = document.getElementById('input-Character');
+var growTree = document.getElementById("growTreeB");
 
-var tree =  {
-        height: 0,
-        character: ""
-};
+var tree = function(obj) {
 
-// Begin writing function to grow tree //
+        var height = obj.height;
+        var character = obj.character;
 
-// Grow your tree event listener function //
-growTree.addEventListener('click', function() {
-        console.log("grow");
-        })
+var final = '';
 
+for (var i = 0; i < height; i++) {
 
+        var grow = '';
+        grow += ' '.repeat(height);
+        grow += character.repeat(2*i + 1) + "\n";
 
+        final += grow;
+  }
+        console.log(final)
+  }
+
+  // var growTree = {
+  //       height: treeHeight.value
+  //       character: userCharacter.value
+  // };
+
+  growTree.addEventListener("click", function(){
+
+    var  inputObj = {
+      height: treeHeight.value,
+      character: userCharacter.value
+    };
+    tree(inputObj);
+  });
+
+  var final = '';
+  var grow = '';
+
+// growTreeB.addEventListener("click", tree)
+//   console.log(final)
 
 // User can press enter to see tree //
 
-treeHeight.addEventListener("keypress", onkeypress);
-        function onkeypress(e) {
-        if (e.key === 'Enter') {
-                console.log("you pressed enter");
-                console.log(treeHeight.value);
-                }
-        if (character.value == "") {
-                alert("Field cannot be empty")
-        }
-        };
+// treeHeight.addEventListener("keypress", tree);
+//         function onAnotherkeypress(e) {
+//         if (e.key === 'Enter') {
+//                 var
+//         // if (treeHeight.value == "") {
+//         //         alert("Both fields must have a value");
+//         // }
+//   }
+// }
 
-character.addEventListener("keypress", onkeypress);
-        function onkeypress(e) {
-        if (e.key === 'Enter') {
-                console.log("you pressed enter");
-                console.log(character.value);
-        if (character.value == "") {
-                alert("Field cannot be empty")
-                }
-        }
-        };
-
-
-// character.addEventListener("keypress", onkeypress);
+// userCharacter.addEventListener("keypress", tree);
 //         function onkeypress(e) {
-//                 console.log(e)
-//                 var keypressed = e.keypressed;
-//                 if (keypressed === 'Enter') {
-//                 }
-//         };
-
-
-// treeHeight.innerHTML = tree-Height
-// charcter.innerHTML = inputCharacter
-
-
-
-// document.addEventListener('click', function (mouseEvent) {
-//   console.log("clicking")
-// })  ---this goes in the console to get the tree to show up the the console when the button is pushed
+//         if (e.key === 'Enter') {
+//                 console.log(grow);
+//         if (character.value == "") {
+//                 alert("Both fields must have a value");
+//         }
+//   }
+// }
