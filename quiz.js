@@ -15,52 +15,63 @@ var final = '';
 for (var i = 0; i < height; i++) {
 
         var grow = '';
-        grow += ' '.repeat(height);
+        grow += ' '.repeat(height - i - 1);
         grow += character.repeat(2*i + 1) + "\n";
 
         final += grow;
   }
+
         console.log(final)
   }
-
-  // var growTree = {
-  //       height: treeHeight.value
-  //       character: userCharacter.value
-  // };
-
   growTree.addEventListener("click", function(){
+        var inputObj = {
+              height: treeHeight.value,
+              character: userCharacter.value
+            };
+            tree (inputObj);
+        });
 
-    var  inputObj = {
-      height: treeHeight.value,
-      character: userCharacter.value
-    };
-    tree(inputObj);
-  });
 
-  var final = '';
-  var grow = '';
+  treeHeight.addEventListener("keypress", onkeypress);
+  function onkeypress(e) {
+      // console.log(tree);
+      var key = e.key;
+      if (key === 'Enter') {
+          var inputObj = {
+          height: treeHeight.value,
+          character: userCharacter.value
+        };
+        tree(inputObj);
+      }
+      if (treeHeight.value == "") {
+        alert("Both fields must have a value");
+          var inputObj = {
+          height: treeHeight.value,
+          character: userCharacter.value
+        };
+        tree(inputObj);
+      }
 
-// growTreeB.addEventListener("click", tree)
-//   console.log(final)
+    }
 
-// User can press enter to see tree //
 
-// treeHeight.addEventListener("keypress", tree);
-//         function onAnotherkeypress(e) {
-//         if (e.key === 'Enter') {
-//                 var
-//         // if (treeHeight.value == "") {
-//         //         alert("Both fields must have a value");
-//         // }
-//   }
-// }
-
-// userCharacter.addEventListener("keypress", tree);
-//         function onkeypress(e) {
-//         if (e.key === 'Enter') {
-//                 console.log(grow);
-//         if (character.value == "") {
-//                 alert("Both fields must have a value");
-//         }
-//   }
-// }
+  userCharacter.addEventListener("keypress", onkeypress);
+  function onkeypress(e) {
+      // console.log(tree);
+      var key = e.key;
+      if (key === 'Enter') {
+        var inputObj = {
+          height: treeHeight.value,
+          character: userCharacter.value
+        };
+        tree(inputObj);
+      }
+      if (userCharacter.value == "") {
+        alert("Both fields must have a value");
+          var inputObj = {
+          height: treeHeight.value,
+          character: userCharacter.value
+        };
+        tree(inputObj);
+      }
+   }
