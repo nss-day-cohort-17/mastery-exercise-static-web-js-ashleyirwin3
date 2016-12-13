@@ -46,15 +46,6 @@ for (var i = 0; i < height; i++) {
         };
         tree(inputObj);
       }
-      // if (treeHeight.value == "") {
-      //   alert("Both fields must have a value");
-      //     var inputObj = {
-      //     height: treeHeight.value,
-      //     character: userCharacter.value
-      //   };
-      //   tree(inputObj);
-      // }
-
   }
 
   userCharacter.addEventListener("keypress", onkeypress);
@@ -68,12 +59,5 @@ for (var i = 0; i < height; i++) {
         };
         tree(inputObj);
       }
-      // if (userCharacter.value == "") {
-      //   alert("Both fields must have a value");
-      //     var inputObj = {
-      //     height: treeHeight.value,
-      //     character: userCharacter.value
-      //   };
-      //   tree(inputObj);
-      // }
+
    }
