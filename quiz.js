@@ -31,6 +31,9 @@ for (var i = 0; i < height; i++) {
             tree (inputObj);
         });
 
+   if (treeHeight === '' || userCharacter === '') {
+        alert("Field cannot be empty");
+  }
 
   treeHeight.addEventListener("keypress", onkeypress);
   function onkeypress(e) {
@@ -43,17 +46,16 @@ for (var i = 0; i < height; i++) {
         };
         tree(inputObj);
       }
-      if (treeHeight.value == "") {
-        alert("Both fields must have a value");
-          var inputObj = {
-          height: treeHeight.value,
-          character: userCharacter.value
-        };
-        tree(inputObj);
-      }
+      // if (treeHeight.value == "") {
+      //   alert("Both fields must have a value");
+      //     var inputObj = {
+      //     height: treeHeight.value,
+      //     character: userCharacter.value
+      //   };
+      //   tree(inputObj);
+      // }
 
-    }
-
+  }
 
   userCharacter.addEventListener("keypress", onkeypress);
   function onkeypress(e) {
@@ -66,12 +68,12 @@ for (var i = 0; i < height; i++) {
         };
         tree(inputObj);
       }
-      if (userCharacter.value == "") {
-        alert("Both fields must have a value");
-          var inputObj = {
-          height: treeHeight.value,
-          character: userCharacter.value
-        };
-        tree(inputObj);
-      }
+      // if (userCharacter.value == "") {
+      //   alert("Both fields must have a value");
+      //     var inputObj = {
+      //     height: treeHeight.value,
+      //     character: userCharacter.value
+      //   };
+      //   tree(inputObj);
+      // }
    }
