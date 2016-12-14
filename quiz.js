@@ -5,6 +5,7 @@ var treeHeight = document.getElementById("tree-Height");
 var userCharacter = document.getElementById('input-Character');
 var growTree = document.getElementById("growTreeB");
 
+
 var tree = function(obj) {
 
         var height = obj.height;
@@ -20,31 +21,48 @@ for (var i = 0; i < height; i++) {
 
         final += grow;
   }
-
         console.log(final)
   }
-  growTree.addEventListener("click", function(){
+
+  growTree.addEventListener("click", clickEvnt);
+      function clickEvnt(e) {
+      var clickB = 'click';
+      if (clickB === 'click'){
+      if (treeHeight.value != '' && userCharacter.value != ''){
         var inputObj = {
               height: treeHeight.value,
               character: userCharacter.value
             };
             tree (inputObj);
-        });
+          }
+          else {
+            alert('Fields cannot be empty')
+          }
+         }
+      };
 
-   if (treeHeight === '' || userCharacter === '') {
-        alert("Field cannot be empty");
-  }
 
-  treeHeight.addEventListener("keypress", onkeypress);
-  function onkeypress(e) {
+  // if (treeHeight.value === '' || userCharacter.value === '') {
+  //   alert("Field cannot be empty");
+  // }else{
+  //   return
+  // }
+
+  treeHeight.addEventListener("keypress", keyEvt);
+  function keyEvt(e) {
       // console.log(tree);
       var key = e.key;
-      if (key === 'Enter') {
+      if (key === 'Enter'){
+        if(treeHeight.value != '' && userCharacter.value != ''){
           var inputObj = {
           height: treeHeight.value,
           character: userCharacter.value
-        };
-        tree(inputObj);
+          };
+          tree (inputObj)
+        }
+        else {
+          alert("Field cannot be empty")
+        }
       }
       // if (treeHeight.value == "") {
       //   alert("Both fields must have a value");
@@ -57,17 +75,7 @@ for (var i = 0; i < height; i++) {
 
   }
 
-  userCharacter.addEventListener("keypress", onkeypress);
-  function onkeypress(e) {
-      // console.log(tree);
-      var key = e.key;
-      if (key === 'Enter') {
-        var inputObj = {
-          height: treeHeight.value,
-          character: userCharacter.value
-        };
-        tree(inputObj);
-      }
+  userCharacter.addEventListener("keypress", keyEvt);
       // if (userCharacter.value == "") {
       //   alert("Both fields must have a value");
       //     var inputObj = {
@@ -76,4 +84,3 @@ for (var i = 0; i < height; i++) {
       //   };
       //   tree(inputObj);
       // }
-   }
