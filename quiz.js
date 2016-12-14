@@ -24,7 +24,7 @@ for (var i = 0; i < height; i++) {
         console.log(final)
   }
 
-  growTree.addEventListener("click", clickEvnt);
+  growTree.addEventListener("click", clickEvnt)
       function clickEvnt(e) {
       var clickB = 'click';
       if (clickB === 'click'){
@@ -42,12 +42,6 @@ for (var i = 0; i < height; i++) {
       };
 
 
-  // if (treeHeight.value === '' || userCharacter.value === '') {
-  //   alert("Field cannot be empty");
-  // }else{
-  //   return
-  // }
-
   treeHeight.addEventListener("keypress", keyEvt);
   function keyEvt(e) {
       // console.log(tree);
@@ -64,23 +58,7 @@ for (var i = 0; i < height; i++) {
           alert("Field cannot be empty")
         }
       }
-      // if (treeHeight.value == "") {
-      //   alert("Both fields must have a value");
-      //     var inputObj = {
-      //     height: treeHeight.value,
-      //     character: userCharacter.value
-      //   };
-      //   tree(inputObj);
-      // }
-
   }
 
+
   userCharacter.addEventListener("keypress", keyEvt);
-      // if (userCharacter.value == "") {
-      //   alert("Both fields must have a value");
-      //     var inputObj = {
-      //     height: treeHeight.value,
-      //     character: userCharacter.value
-      //   };
-      //   tree(inputObj);
-      // }
